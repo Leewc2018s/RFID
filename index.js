@@ -17,7 +17,6 @@ var led;
 boardReady({board: 'Smart', device: 'YgxM2', transport: 'mqtt', multi: true}, function (board) {
     board.samplingInterval = 50;
     led = getLed(board, 5);
-    const name= prompt("Enter name");
     document.getElementById('name').textContent = name;
     // Toggle the light based on the 'light' parameter
     toggleLight(light);
